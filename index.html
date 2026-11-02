@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Habit Tracker - SaaS Style</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div class="container">
+    <h2> Habit Tracker</h2>
+    
+    <!-- Input Section -->
+    <div class="input-group">
+        <input type="text" id="habitInput" placeholder="Enter new habit (e.g., Gym, Read)...">
+        <select id="durationSelect">
+            <option value="30">1 Month (30 Days)</option>
+            <option value="60">2 Months (60 Days)</option>
+            <option value="90" selected>3 Months (90 Days)</option>
+            <option value="180">6 Months (180 Days)</option>
+            <option value="365">1 Year (365 Days)</option>
+        </select>
+        <button onclick="addHabit()">Add Habit</button>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Habit Name</th>
+                    <th>Progress Timeline (Scrollable)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="habitTableBody">
+                <!-- Dynamically loaded -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Animated Graph Section -->
+    <div class="chart-container">
+        <canvas id="habitChart"></canvas>
+    </div>
+</div>
+
+<!-- Custom JS Link -->
+<script src="script.js"></script>
+</body>
+</html>
